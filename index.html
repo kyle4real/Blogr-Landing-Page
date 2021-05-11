@@ -8,7 +8,13 @@
         <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
         <title>Frontend Mentor | [Blogr]</title>
-
+        <link
+            rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="styles/style.css" />
         <style>
             .attribution {
                 font-size: 11px;
@@ -20,10 +26,52 @@
         </style>
     </head>
     <body>
-        <div class="attribution">
+        <div class="container">
+            <div class="nav-container">
+                <div class="nav">
+                    <img src="./images/logo.svg" alt="" class="logo" />
+                    <div class="nav-item-container">
+                        <a href="#" class="nav-item">Product <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-item">Company <i class="fas fa-chevron-down"></i></a>
+                        <a href="#" class="nav-item">Connect <i class="fas fa-chevron-down"></i></a>
+                    </div>
+                    <div class="account-buttons-container">
+                        <a href="#" class="nav-item">Login</a>
+                        <a class="btn">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+            <header>
+                <img src="images/bg-pattern-intro.svg" alt="" id="header-pattern" />
+                <div class="header-content">
+                    <div class="header-title">A modern publishing platform</div>
+                    <div class="header-description">
+                        Grow your audience and build your online brand
+                    </div>
+                    <div class="header-buttons">
+                        <a class="btn">Start for Free</a>
+                        <a class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <div class="head">
+                    <h1>Designed for the future</h1>
+                </div>
+                <div class="info"></div>
+                <div class="media">
+                    <img src="./images/illustration-editor-desktop.svg" alt="" id="editor-img" />
+                </div>
+                <div class="foot"></div>
+            </section>
+            <div class="divider"></div>
+            <section></section>
+            <footer></footer>
+        </div>
+        <!-- <div class="attribution">
             Challenge by
             <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
-        </div>
+        </div> -->
     </body>
 </html>

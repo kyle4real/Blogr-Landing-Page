@@ -30,14 +30,24 @@
             <div class="nav-container">
                 <div class="nav">
                     <img src="./images/logo.svg" alt="" class="logo" />
-                    <div class="nav-item-container">
-                        <a href="#" class="nav-item">Product <i class="fas fa-chevron-down"></i></a>
-                        <a href="#" class="nav-item">Company <i class="fas fa-chevron-down"></i></a>
-                        <a href="#" class="nav-item">Connect <i class="fas fa-chevron-down"></i></a>
-                    </div>
-                    <div class="account-buttons-container">
-                        <a href="#" class="nav-item">Login</a>
-                        <a class="btn">Sign Up</a>
+                    <img src="images/icon-hamburger.svg" class="toggle-menu" id="toggleMenu"></img>
+                    <img src="images/icon-close.svg" class="close-menu" id="closeMenu"></img>
+                    <div class="nav-display-container" id="menu">
+                        <div class="nav-item-container">
+                            <a href="#" class="nav-item"
+                                >Product <i class="fas fa-chevron-down"></i
+                            ></a>
+                            <a href="#" class="nav-item"
+                                >Company <i class="fas fa-chevron-down"></i
+                            ></a>
+                            <a href="#" class="nav-item"
+                                >Connect <i class="fas fa-chevron-down"></i
+                            ></a>
+                        </div>
+                        <div class="account-buttons-container">
+                            <a href="#" class="nav-item">Login</a>
+                            <a class="btn nav-btn">Sign Up</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -58,7 +68,9 @@
                 <div class="head">
                     <h1>Designed for the future</h1>
                 </div>
-
+                <div class="media">
+                    <img src="./images/illustration-editor-desktop.svg" alt="" id="editor-img" />
+                </div>
                 <div class="info">
                     <div class="info-containers">
                         <h2>Introducing an extensible editor</h2>
@@ -80,9 +92,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="media">
-                    <img src="./images/illustration-editor-desktop.svg" alt="" id="editor-img" />
-                </div>
+                
 
                 <div class="foot"></div>
             </section>
@@ -170,9 +180,11 @@
             </footer>
         </div>
         <!-- <div class="attribution">
+
             Challenge by
             <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a
             >. Coded by <a href="#">Your Name Here</a>.
         </div> -->
+        <script src="scripts/app.js"></script>
     </body>
 </html>

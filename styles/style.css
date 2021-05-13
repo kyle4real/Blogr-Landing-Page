@@ -47,6 +47,7 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .logo {
@@ -55,8 +56,14 @@ body {
     height: 40px;
     margin-right: 4%;
 }
-.nav-item-container {
+.nav-display-container {
     /* CHILD of NAV */
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+.nav-item-container {
+    /* CHILD of NAV-DISPLAY-CONTAINER */
     flex: 1;
 }
 .nav-item {
@@ -72,7 +79,7 @@ body {
     font-size: 0.8rem;
 }
 .account-buttons-container {
-    /* CHILD of NAV */
+    /* CHILD of NAV-DISPLAY-CONTAINER */
     display: flex;
 }
 .btn {
@@ -88,6 +95,67 @@ body {
     color: var(--light-red);
     margin-left: 15px;
 }
+.toggle-menu {
+    display: none;
+    cursor: pointer;
+}
+.close-menu {
+    display: none;
+    cursor: pointer;
+}
+@media screen and (max-width: 920px) {
+    .nav {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .toggle-menu {
+        display: inline;
+    }
+    .display-none {
+        display: none;
+    }
+    .display-inline {
+        display: inline;
+    }
+    .nav-display-container {
+        font-size: 1.2rem;
+        position: absolute;
+        top: -500px;
+        background: white;
+        border-radius: 10px;
+        width: 100%;
+        min-height: 30vh;
+        flex-direction: column;
+        text-align: center;
+        font-family: "Overpass", sans-serif;
+        transition: 0.3s ease-in;
+    }
+    .nav-item-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-item {
+        color: var(--Very-dark-blue);
+        font-weight: 600;
+    }
+    .account-buttons-container {
+        margin-bottom: 25px;
+        flex-direction: column;
+    }
+    .nav-btn {
+        color: var(--white);
+        background: linear-gradient(100deg, var(--g-very-light-red), var(--g-light-red));
+        padding-top: 5px;
+        margin-left: 0;
+    }
+    .show {
+        top: 150px;
+    }
+}
+
 .btn-secondary {
     background: transparent;
     border: 1px solid var(--white);
@@ -120,13 +188,15 @@ header {
     align-items: center;
     text-align: center;
     margin-top: 120px;
-    height: 37.5%;
+    height: 38%;
     color: var(--white);
     position: relative;
+    width: 100%;
 }
 .header-content > .header-title {
     font-size: 3.8rem;
 }
+
 .header-content > .header-description {
     flex: 1;
     font-size: 1.3rem;
@@ -138,6 +208,27 @@ header {
 }
 .header-buttons > .btn {
     padding-top: 5px;
+}
+
+@media screen and (max-width: 1020px) {
+    .header-content {
+        margin-top: 80px;
+    }
+    .header-content > .header-title {
+        max-width: 80%;
+        line-height: 1;
+    }
+    .header-content > .header-buttons {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .header-content {
+        margin-top: 60px;
+    }
+    .header-content > .header-title {
+        font-size: 3.5rem;
+    }
 }
 
 .section-one {
@@ -224,6 +315,39 @@ header {
         margin-top: 5px;
     }
 }
+@media screen and (max-width: 920px) {
+    .section-one {
+        /* height: 1680px; */
+        height: 1400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .head > h1 {
+        font-size: 2rem;
+        margin: 150px 0 75px 0;
+    }
+    .media {
+        display: static;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #editor-img {
+        position: static;
+        max-width: 60%;
+        height: auto;
+    }
+    .info {
+        margin: 45px 50px;
+        text-align: center;
+        justify-content: flex-start;
+    }
+    .info-containers {
+        margin-top: 40px;
+    }
+}
 
 .divider {
     height: 400px;
@@ -302,6 +426,26 @@ header {
     }
     .info-container > p {
         margin-top: 5px;
+    }
+}
+@media screen and (max-width: 920px) {
+    .divider {
+        height: 575px;
+    }
+    #phones-img {
+        top: -175px;
+        left: 50px;
+    }
+    .divider-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.8fr;
+    }
+    .info-container {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
     }
 }
 

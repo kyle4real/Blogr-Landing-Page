@@ -34,15 +34,33 @@
                     <img src="images/icon-close.svg" class="close-menu" id="closeMenu"></img>
                     <div class="nav-display-container" id="menu">
                         <div class="nav-item-container">
-                            <a href="#" class="nav-item"
-                                >Product <i class="fas fa-chevron-down"></i
-                            ></a>
-                            <a href="#" class="nav-item"
-                                >Company <i class="fas fa-chevron-down"></i
-                            ></a>
-                            <a href="#" class="nav-item"
-                                >Connect <i class="fas fa-chevron-down"></i
-                            ></a>
+                            <div href="#" class="nav-item dropdown" id="productDropdownToggle">
+                                Product
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="dropdown-content" id="productDropdown">
+                                    <a href="#">Pricing</a>
+                                    <a href="#">Marketplace</a>
+                                    <a href="#">Features</a>
+                                </div>
+                            </div>
+                            <div href="#" class="nav-item dropdown" id="companyDropdownToggle">
+                                Company
+                                <i class="fas fa-chevron-down"></i>
+                                <div class="dropdown-content" id="companyDropdown">
+                                    <a href="#">About</a>
+                                    <a href="#">Team</a>
+                                    <a href="#">Blog</a>
+                                </div>
+                            </div>
+                            <div href="#" class="nav-item dropdown" id="connectDropdownToggle">
+                                Connect
+                                <i class="fas fa-chevron-down chevron-flip"></i>
+                                <div class="dropdown-content" id="connectDropdown">
+                                    <a href="#">Contact</a>
+                                    <a href="#">Newsletter</a>
+                                    <a href="#">Linkedin</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="account-buttons-container">
                             <a href="#" class="nav-item">Login</a>

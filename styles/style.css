@@ -94,6 +94,11 @@ body {
     font-weight: 600;
     color: var(--light-red);
     margin-left: 15px;
+    transition: 0.2s;
+}
+.btn:hover {
+    background: var(--very-light-red);
+    color: var(--white);
 }
 .toggle-menu {
     display: none;
@@ -161,6 +166,10 @@ body {
     border: 1px solid var(--white);
     color: var(--white);
 }
+.btn-secondary:hover {
+    background: var(--white);
+    color: var(--light-red);
+}
 
 header {
     /* height: 76.5vh; */
@@ -202,6 +211,7 @@ header {
     font-size: 1.3rem;
     margin-top: 15px;
     font-weight: 300;
+    font-family: "Ubuntu", sans-serif;
 }
 .header-content > .header-buttons {
     display: flex;
@@ -227,7 +237,24 @@ header {
         margin-top: 60px;
     }
     .header-content > .header-title {
-        font-size: 3.5rem;
+        font-size: 3.3rem;
+    }
+}
+@media screen and (max-width: 649px) {
+    .header-content {
+        margin-top: 40px;
+    }
+    .header-content > .header-title {
+        font-size: 2.8rem;
+    }
+    @media screen and (max-width: 515px) {
+        .header-content > .header-title {
+            font-size: 2.1rem;
+            line-height: 1.3;
+        }
+        .header-content > .header-description {
+            width: 80%;
+        }
     }
 }
 
@@ -326,26 +353,49 @@ header {
     }
     .head > h1 {
         font-size: 2rem;
-        margin: 150px 0 75px 0;
+        margin: 100px 0 75px 0;
     }
     .media {
         display: static;
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 80%;
+        margin: 0 auto 25px auto;
     }
     #editor-img {
         position: static;
-        max-width: 60%;
+        max-width: 90%;
         height: auto;
     }
     .info {
-        margin: 45px 50px;
+        /* margin: 45px 50px; */
+        width: 80%;
+        margin: 0 auto;
         text-align: center;
         justify-content: flex-start;
     }
     .info-containers {
         margin-top: 40px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .head > h1 {
+        font-size: 1.8rem;
+        margin: 100px 0 40px 0;
+    }
+    #editor-img {
+        max-width: 100%;
+    }
+    .media {
+        margin: 0 auto 10px auto;
+    }
+    .info-containers > h2 {
+        font-size: 1.7rem;
+    }
+    .info-containers > p {
+        margin-top: 15px;
+        font-size: 1.05rem;
     }
 }
 
@@ -448,6 +498,19 @@ header {
         text-align: center;
     }
 }
+@media screen and (max-width: 400px) {
+    .divider {
+        height: 600px;
+    }
+    #phones-img {
+        left: 20px;
+        width: calc(552px * 0.65);
+        height: calc(579px * 0.65);
+    }
+    .divider-container {
+        grid-template-rows: 0.25fr 0.8fr;
+    }
+}
 
 .section-two {
     height: 1000px;
@@ -492,6 +555,36 @@ header {
         top: -100px;
     }
 }
+@media screen and (max-width: 920px) {
+    .section-two {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+    }
+    .section-two-media {
+        display: flex;
+        width: 80%;
+        margin: 50px auto 25px auto;
+        position: static;
+        justify-content: center;
+        align-items: center;
+    }
+    #laptop-img {
+        position: static;
+        max-width: 90%;
+        height: auto;
+    }
+    .section-two-info {
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 400px) {
+    #laptop-img {
+        max-width: 100%;
+    }
+}
 
 footer {
     height: 380px;
@@ -528,4 +621,26 @@ footer {
     color: var(--grayish-blue);
     margin: 17px 0;
     font-weight: 300;
+}
+
+@media screen and (max-width: 760px) {
+    footer {
+        height: 800px;
+    }
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: 80%;
+    }
+    .footer-logo {
+        margin-bottom: 50px;
+    }
+    .footer-col {
+        margin-bottom: 15px;
+    }
+    .col-link {
+        margin: 13px 0;
+    }
 }

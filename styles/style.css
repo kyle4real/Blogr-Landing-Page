@@ -32,6 +32,8 @@ body {
     /* height: 100vh; */
     background-color: var(--white);
     position: relative;
+    max-width: 2200px;
+    margin: 0 auto;
 }
 
 .nav-container {
@@ -67,7 +69,7 @@ body {
     flex: 1;
     display: flex;
 }
-/* CONSTRUCTION */
+
 .nav-item {
     text-decoration: none;
     padding: 16px;
@@ -108,7 +110,7 @@ body {
 .show-dropdown {
     display: block;
 }
-/* CONSTRUCTION */
+
 .fa-chevron-down,
 .fa-chevron-up {
     font-size: 0.8rem;
@@ -370,12 +372,16 @@ header {
     grid-area: media;
     position: relative;
 }
-#editor-img {
+.editor-img-desktop {
     position: absolute;
     width: 925px;
     height: 882px;
     top: -200px;
     left: 0;
+}
+
+.editor-img-mobile {
+    display: none;
 }
 
 @media screen and (max-width: 1280px) {
@@ -385,7 +391,7 @@ header {
     .head > h1 {
         font-size: 2.2rem;
     }
-    #editor-img {
+    .editor-img-desktop {
         max-width: calc(925px * 0.75);
         height: calc(882px * 0.75);
         top: -50px;
@@ -423,10 +429,17 @@ header {
         width: 80%;
         margin: 0 auto 25px auto;
     }
-    #editor-img {
+    .editor-img-desktop {
         position: static;
         max-width: 90%;
         height: auto;
+        display: none;
+    }
+    .editor-img-mobile {
+        position: static;
+        max-width: 100%;
+        height: auto;
+        display: block;
     }
     .info {
         /* margin: 45px 50px; */
@@ -444,8 +457,11 @@ header {
         font-size: 1.8rem;
         margin: 100px 0 40px 0;
     }
-    #editor-img {
+    /* .editor-img-desktop {
         max-width: 100%;
+    } */
+    .editor-img-mobile {
+        max-width: 120%;
     }
     .media {
         margin: 0 auto 10px auto;
@@ -508,6 +524,8 @@ header {
 .divider-info {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 3;
 }
 .info-container {
     width: 77.5%;
@@ -542,6 +560,12 @@ header {
     .divider {
         height: 575px;
     }
+    .divider-media > .circle {
+        width: calc(1014px * 0.9);
+        height: calc(1018px * 0.9);
+        bottom: -300px;
+        right: -75px;
+    }
     #phones-img {
         top: -175px;
         left: 50px;
@@ -558,6 +582,19 @@ header {
         text-align: center;
     }
 }
+@media screen and (max-width: 760px) {
+    #phones-img {
+        left: 25px;
+        width: calc(552px * 0.75);
+        height: calc(579px * 0.75);
+    }
+    .divider-media > .circle {
+        width: calc(1014px * 0.8);
+        height: calc(1018px * 0.8);
+        bottom: -300px;
+        right: -80px;
+    }
+}
 @media screen and (max-width: 400px) {
     .divider {
         height: 600px;
@@ -569,6 +606,15 @@ header {
     }
     .divider-container {
         grid-template-rows: 0.25fr 0.8fr;
+    }
+    .info-container > p {
+        margin-top: 10px;
+    }
+    .divider-media > .circle {
+        width: calc(1014px * 0.6);
+        height: calc(1018px * 0.6);
+        bottom: -300px;
+        right: -100px;
     }
 }
 
@@ -597,19 +643,22 @@ header {
     position: relative;
 }
 
-#laptop-img {
+.laptop-img-desktop {
     position: absolute;
     width: 974px;
     height: 786px;
     top: -150px;
     left: -275px;
 }
+.laptop-img-mobile {
+    display: none;
+}
 
 @media screen and (max-width: 1280px) {
     .section-two-info {
         margin: 20px 100px 20px 60px;
     }
-    #laptop-img {
+    .laptop-img-desktop {
         width: calc(974px * 0.8);
         height: calc(786px * 0.8);
         top: -100px;
@@ -629,10 +678,15 @@ header {
         justify-content: center;
         align-items: center;
     }
-    #laptop-img {
-        position: static;
+    .laptop-img-desktop {
+        /* position: static;
         max-width: 90%;
-        height: auto;
+        height: auto; */
+        display: none;
+    }
+    .laptop-img-mobile {
+        display: block;
+        max-width: 100%;
     }
     .section-two-info {
         width: 80%;
@@ -641,8 +695,11 @@ header {
     }
 }
 @media screen and (max-width: 400px) {
-    #laptop-img {
+    /* .laptop-img-desktop {
         max-width: 100%;
+    } */
+    .laptop-img-mobile {
+        max-width: 140%;
     }
 }
 
@@ -676,9 +733,14 @@ footer {
     margin-top: 30px;
 }
 .col-link {
-    color: var(--grayish-blue);
     margin: 17px 0;
     font-weight: 300;
+}
+.col-link a {
+    text-decoration: none;
+    color: var(--grayish-blue);
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (max-width: 760px) {
